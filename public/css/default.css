@@ -1,0 +1,691 @@
+
+*
+{
+    /* background-color: antiquewhite; */
+    font-family: 'Karma', serif;
+    user-select: none;
+}
+
+body
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.section
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+/* .section-4
+{
+    padding-bottom: 0;
+    margin-bottom: 0;
+} */
+
+.section img
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+
+
+#top-navi
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5vh;
+    background-color: transparent;
+    z-index: 20;
+}
+
+
+#buttons /* this is a ul */
+{
+    /* position: absolute; */
+    /* display: inline-block; */
+    /* list-style-type: none; */
+}
+
+.button
+{
+    position: fixed;
+    top: 0;
+    width: 20vh;
+    height: 4vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    margin-right: 1vh;
+    border-color: rgb(66, 66, 70);
+    color: rgb(66, 66, 70);
+    border-width: 0.05vh;
+    border-style: solid;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.2vh 0.2vh 3vh 3vh;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0);
+    border-color: transparent;
+    transition: ease-in-out 0.2s;
+    letter-spacing: 0.05vh;
+}
+
+.button#button1
+{
+    left: 1vh;
+}
+
+.button#button2
+{
+    left: 21.5vh;
+}
+
+.button:hover
+{
+    color: rgba(255, 255, 255);
+    background-color: rgb(108, 108, 160);
+    border-width: 0.05vh;
+    border-color: transparent;
+    /* border-bottom-color: white; */
+    /* box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3); */
+    border-radius: 0vh 0vh 1vh 1vh;
+    transition: ease-in-out 0.2s;
+}
+
+.button.active-button
+{
+    color: rgba(255, 255, 255);
+    background-color: rgba(65, 65, 95, 1);
+    border-width: 0.05vh;
+    border-bottom-color: white;
+    box-shadow: 0.1vh 0.1vh 2vh rgba(0, 0, 0, 0.5);
+    border-radius: 0vh 0vh 0.3vh 0.3vh;
+    transition: ease-in-out 0.2s;
+}
+
+.button.active-button span
+{
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+.button a
+{
+    text-decoration: none;
+    /* color: white; */
+}
+
+.button div
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 100%;
+    background-color: aqua;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    background-color: aquamarine;
+}
+
+.button span
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    font-size: 1.8vh;
+    color: rgb(66, 66, 70);
+    transition: ease-in-out 0.2s;
+}
+
+.button:hover span
+{
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+#page-header
+{
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    transform: translateY(-50%);
+    width: 30%;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.5);
+    border-radius: 0.3vh 0 0 0.3vh;
+    z-index: 20;
+}
+
+#page-header h1
+{
+     position: relative;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    color: black;
+    font-size: 3vh;
+    letter-spacing: 0.3vh;
+    text-shadow: 2vh 2vh 2vh rgba(0, 0, 0, 0.5);
+    text-align: center;
+    top: 35%;
+    transform: translateY(-50%);
+    /* vertical-align: middle; */
+}
+
+#middle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 35vh;
+    /* background-color: rgba(255, 255, 255, 0.445); */
+    border-radius: 0.3vh;
+    transition: ease-in-out 0.2s;
+    z-index: 20;
+}
+
+#middle img
+{
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15vh;
+    height: 15vh;
+}
+
+#middle input
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vh;
+    height: 4vh;
+    border-color: transparent;
+    border-width: 0.1vh;
+    border-radius: 0.5vh;
+    background-color: transparent;
+    border-bottom-color: transparent;
+    border-bottom-width: 0.2vh;
+    font-size: 2vh;
+    color: white;
+    text-shadow: 0vh 0vh 1vh black;
+    user-select: text;
+    font-weight: 500;
+    text-align: center;
+    transition: ease-in-out 0.2s;
+}
+
+#middle input:focus
+{
+    width: 60vh;
+    /* text-align: left; */
+    background-color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1vh 1vh 1vh transparent;
+    color: black;
+    border-bottom-color: rgb(0, 0, 0);
+    transition: ease-in-out 0.2s;
+}
+
+#middle button
+{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 3vh;
+    color: white;
+    background-color: rgba(87, 87, 87, 0.5);
+    border-width: 0.1vh;
+    border-color: transparent;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-size: 2vh;
+
+
+}
+
+#middle button:hover
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+#middle-results
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 65vh;
+    /* background-color: rgba(255, 255, 255, 0.445); */
+    border-radius: 0.3vh;
+    transition: ease-in-out 0.2s;
+    z-index: 20;
+}
+
+#middle-results img
+{
+    /* position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15vh;
+    height: 15vh; */
+}
+
+#middle-results svg /*this will catch the rest of the svg unless they are specified, as they originally have*/
+{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25vh;
+    height: 25vh;
+    fill: white;
+    background-color: rgba(65, 65, 95, 1);
+    border-radius: 3vh;
+}
+
+#result-details /*this is a ul*/
+{
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* box-sizing: border-box; */
+    /* text-align: center; */
+}
+
+#result-details li
+{
+    position: relative;
+    left: 48%;
+    transform: translateX(-50%);
+    list-style-type: none;
+    margin-bottom: 2vh;
+    display: flex;
+    background-color: rgb(65, 65, 95);
+    box-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.5);
+    text-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.5);
+    padding: 1vh 2vh ;
+    color: white;
+    font-size: 2vh;
+    letter-spacing: 0.2vh;
+    /* margin: 2vh; */
+    width: 50%;
+}
+
+#result-details li svg
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5vh;
+    height: 5vh;
+    
+    /* width: 5%;
+    height: 3vh; */
+    margin-right: 2%;
+    fill: white;
+    object-fit: contain;
+    /* background-color: aliceblue; */
+}
+
+#result-icon /*targets only the first (country flag) icon*/
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.5vh;
+    height: 3.5vh;
+    
+    /* width: 5%;
+    height: 3vh; */
+    margin-right: 2%;
+    fill: white;
+    object-fit: contain;
+    /* background-color: aliceblue; */
+}
+
+#result-title
+{
+    text-align: left;
+    width: 50%;
+}
+
+
+#result-value
+{
+    text-align: left;
+    position: relative;
+    left: 10%;
+    width: 40%;
+    /* margin-left: 10%; */
+    /* background-color: aqua; */
+}
+
+#result-details li:nth-child(1)
+{
+    border-radius: 1.5vh 1.5vh 0vh 1.5vh;
+}
+
+#result-details li:nth-child(2), #result-details li:nth-child(4)
+{
+    border-radius: 1.5vh 0vh 1.5vh 0vh;
+}
+
+#result-details li:nth-child(3), #result-details li:nth-child(5)
+{
+    border-radius: 0vh 1.5vh 0vh 1.5vh;
+}
+
+#result-details li:nth-child(6)
+{
+    border-radius: 1.5vh 0vh 1.5vh 1.5vh;
+}
+
+#btn-back
+{
+    position: absolute;
+    top: 51%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 5vh;
+    height: 5vh;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-color: rgba(65, 65, 95, 1);
+    border-radius: 5vh;
+    color: rgba(0, 0, 0, 0);
+    z-index: 20;
+    transition: ease-in-out 0.2s;
+}
+
+#btn-back span
+{
+    position: absolute;
+    left: 30%;
+    top: 53%;
+    transform: translateX(-50%, -50%);
+    /* top: 50%; */
+    transform: translateY(-50%);
+    left: 0;
+    visibility: hidden;
+    font-size: 1.9vh;
+    color: transparent;
+    width: 14vh;
+}
+
+#btn-back:hover
+{
+    width: 20vh;
+    background-color: white;
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.2s;
+}
+
+#btn-back:hover > span
+{
+    position: absolute;
+    left: 30%;
+    top: 53%;
+    transform: translateX(-50%, -50%);
+    color: rgb(65, 65, 95);
+    text-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    transition: ease-in-out 0.4s;
+}
+
+/* #btn-back img
+{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 4vh;
+    width: auto;
+    transition: ease-in-out 0.2s;
+} */
+
+#btn-back svg
+{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 4vh;
+    width: auto;
+    transition: ease-in-out 0.2s;
+}
+
+.left-arrow
+{
+    fill: white;
+    transition: ease-in-out 0.2s;
+}
+
+#btn-back:hover .left-arrow
+{
+    fill: rgba(65, 65, 95, 1);
+    transition: ease-in-out 0.2s;
+}
+
+#btn-back:hover > svg
+{
+    left: 5%;
+    transform: translate(0, -50%);
+    transition: ease-in-out 0.2s;
+}
+
+/* #btn-back:hover > img
+{
+    left: 5%;
+    transform: translate(0, -50%);
+    transition: ease-in-out 0.2s;
+} */
+
+/* search error message */
+#search_error
+{
+    position: absolute;
+    top: -40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    width: auto;
+    min-width: 50vh;
+    height: 3vh;
+    background-color: rgba(65, 65, 95, 1);
+    box-shadow: 1vh 1vh 2vh rgba(0, 0, 0, 0.5);
+    border-radius: 4vh;
+    transition: ease-in-out 0.5s;
+
+    /* text-align: center; */
+
+}
+
+#search_error span
+{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 100%;
+    min-width: 100%;
+    background-color: transparent;
+    text-align: center;
+}
+
+
+/* popular cities page */
+
+#middle-popular
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    background-color: blue;
+}
+
+.popular-card
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-color: black;
+    border-width: 1vh;
+    background-color: burlywood;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-card img
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#popular-card-details
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: 20%;
+    transform: translate(-50%, -50%);
+    /* background-color: aliceblue; */
+    background-image: linear-gradient(to bottom right, transparent, rgba(255, 255, 255, 0.5));
+    box-shadow: 2px 2px 2vh rgba(0, 0, 0, 0.5);
+    border-radius: 0.1vh;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-card-country, 
+.popular-card-description, 
+.popular-card-temprature, 
+.popular-card-humidity,
+.popular-card-wind
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47%;
+    height: 5vh;
+    /* background-color: yellow; */
+    /* border-radius: 0.1vh; */
+    /* border: solid 0.1vh transparent; */
+    /* box-shadow: 0 0 0.2vh rgba(0, 0, 0, 0.5); */
+}
+
+.popular-card-country
+{
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popular-card-description
+{
+    top: 7vh;
+    left: 1%;
+}
+
+.popular-card-temprature
+{
+    top: 13vh;
+    left: 1%;
+}
+
+.popular-card-humidity
+{
+    top: 7vh;
+    left: 50%;
+    margin-left: 1%;
+}
+
+.popular-card-wind
+{
+    top: 13vh;
+    left: 50%;
+    margin-left: 1%;
+}
+
+#popular-card-icon
+{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4vh;
+    height: 4vh;
+}
+
+.popular-card-country span, 
+.popular-card-description span, 
+.popular-card-temprature span, 
+.popular-card-humidity span,
+.popular-card-wind span
+{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    /* background-color: yellow; */
+    font-size: 2vh;
+    /* padding-left: 10vh; */
+}
+
+.popular-card-description svg, 
+.popular-card-temprature svg, 
+.popular-card-humidity svg,
+.popular-card-wind svg
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6vh;
+    height: 6vh;
+}
+
